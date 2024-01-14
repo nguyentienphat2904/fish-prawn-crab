@@ -22,7 +22,7 @@ let money4 = document.getElementById("money4");
 let money5 = document.getElementById("money5");
 let money6 = document.getElementById("money6");
 
-function Beton1(){
+function Beton(num){
 
     if (money <= 0){
         alert("You don not have enough money");
@@ -30,68 +30,28 @@ function Beton1(){
     }
     money -= 10;
     Money.textContent = "Money: " + money + "🧧";
-    bet[0] += 10;
-    money1.textContent = bet[0] + "🧧";
-}
-
-function Beton2(){
-
-    if (money <= 0){
-        alert("You don not have enough money");
-        return;
+    bet[num - 1] += 10;
+    
+    switch(num){
+        case 1:
+            money1.textContent = bet[0] + "🧧";
+            break;
+        case 2:
+            money2.textContent = bet[1] + "🧧";
+            break;
+        case 3:
+            money3.textContent = bet[2] + "🧧";
+            break;
+        case 4:
+            money4.textContent = bet[3] + "🧧";
+            break;
+        case 5:
+            money5.textContent = bet[4] + "🧧";
+            break;
+        case 6:
+            money6.textContent = bet[5] + "🧧";
+            break;
     }
-    money -= 10;
-    Money.textContent = "Money: " + money  + "🧧";
-    bet[1] += 10;
-    money2.textContent = bet[1] + "🧧";
-}
-
-function Beton3(){
-
-    if (money <= 0){
-        alert("You don not have enough money");
-        return;
-    }
-    money -= 10;
-    Money.textContent = "Money: " + money + "🧧";
-    bet[2] += 10;
-    money3.textContent = bet[2] + "🧧";
-}
-
-function Beton4(){
-
-    if (money <= 0){
-        alert("You don not have enough money");
-        return;
-    }
-    money -= 10;
-    Money.textContent = "Money: " + money + "🧧";
-    bet[3] += 10;
-    money4.textContent = bet[3] + "🧧";
-}
-
-function Beton5(){
-
-    if (money <= 0){
-        alert("You don not have enough money");
-        return;
-    }
-    money -= 10;
-    Money.textContent = "Money: " + money + "🧧";
-    bet[4] += 10;
-    money5.textContent = bet[4] + "🧧";
-}
-
-function Beton6(){
-
-    if (money <= 0){
-        alert("You don not have enough money");
-        return;
-    }
-    money -= 10;
-    Money.textContent = "Money: " + money + "🧧";
-    bet[5] += 10;
-    money6.textContent = bet[5] + "🧧";
 }
 
 function rollDice(callBack){
